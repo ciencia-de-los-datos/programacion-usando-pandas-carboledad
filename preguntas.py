@@ -22,8 +22,7 @@ def pregunta_01():
     40
 
     """
-    filas = tbl0.shape[0]
-    filas
+    return len(tbl0. index)
 
 
 def pregunta_02():
