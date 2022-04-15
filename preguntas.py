@@ -170,7 +170,7 @@ def pregunta_10():
     tbl0_orden = tbl0.sort_values(by='_c2')
     tbl0_list = tbl0_orden.groupby(['_c1'])['_c2'].apply(lambda x: ':'.join(str(i) for i in x))
     tbl0_list = tbl0_list.reset_index()
-    tbl0_list.columns = ["_c0", "lista"]
+    tbl0_list.columns = ["_c0", "_c1"]
     return tbl0_list
 
 
@@ -190,8 +190,11 @@ def pregunta_11():
     38   38      d,e
     39   39    a,d,f
     """
-    return
-
+    tbl1_orden = tbl1.sort_values(by='_c4')
+    tbl1_list = tbl1_orden.groupby(['_c0'])['_c4'].apply(lambda x: ','.join(str(i) for i in x))
+    tbl1_list = tbl1_list.reset_index()
+    tbl1_list.columns = ["_c0", "_c4"]
+    return tbl1_list
 
 def pregunta_12():
     """
