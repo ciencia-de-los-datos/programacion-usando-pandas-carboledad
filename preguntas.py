@@ -150,7 +150,7 @@ def pregunta_09():
     39   39   E    5  1998-01-26  1998
 
     """
-    tbl0['YEAR'] = tbl0['_c3'].str[:4]
+    tbl0['year'] = tbl0['_c3'].str[:4]
     return tbl0
 
 def pregunta_10():
@@ -167,7 +167,11 @@ def pregunta_10():
     3   D                  1:2:3:5:5:7
     4   E  1:1:2:3:3:4:5:5:5:6:7:8:8:9
     """
-    return
+    tbl0_orden = tbl0.sort_values(by='_c2')
+    tbl0_list = tbl0_orden.groupby(['_c1'])['_c2'].apply(lambda x: ':'.join(str(i) for i in x))
+    tbl0_list = tbl0_list.reset_index()
+    tbl0_list.columns = ["_c0", "lista"]
+    return tbl0_list
 
 
 def pregunta_11():
