@@ -216,7 +216,7 @@ def pregunta_12():
     tbl2['_c5c'] = tbl2['_c5a'] + ':' + tbl2['_c5b']
     tbl2_list = tbl2.groupby(['_c0'])['_c5c'].apply(lambda x: ','.join(str(i) for i in x))
     tbl2_list = tbl2_list.reset_index()
-    tbl2_list.columns = ['_c0', '_c5']
+    tbl2_list.columns = ["_c0", "_c5"]
     return tbl2_list
 
 def pregunta_13():
