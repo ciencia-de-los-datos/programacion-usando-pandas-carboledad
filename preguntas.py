@@ -95,8 +95,10 @@ def pregunta_06():
     ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     """
-    return
-
+    tbl1['_c4'] = tbl1['_c4'].str.upper()
+    tbl1list = list(tbl1['_c4'])
+    tbl1set = sorted(set(tbl1list))
+    return tbl1set
 
 def pregunta_07():
     """
