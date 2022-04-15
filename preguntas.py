@@ -111,8 +111,8 @@ def pregunta_07():
     E    67
     Name: _c2, dtype: int64
     """
-    return
-
+    prom = tbl0.groupby('_c1')['_c2'].sum()
+    return prom
 
 def pregunta_08():
     """
