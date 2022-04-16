@@ -171,7 +171,7 @@ def pregunta_10():
     tbl0_orden = tbl0.sort_values(by='_c2')
     tbl0_list = tbl0_orden.groupby(['_c1'])['_c2'].apply(lambda x: ':'.join(str(i) for i in x))
     tbl0_list = tbl0_list.reset_index()
-    tbl0_list.columns = ["_c1", "_c2"]
+    tbl0_list.columns = ["_c0", "_c1"]
     return tbl0_list
 
 
